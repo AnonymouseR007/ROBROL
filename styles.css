@@ -6,7 +6,10 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
   }
   
   body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
+  }
+  h1, h2, h3, p, a {
+    font-family: 'Roboto', Arial, sans-serif;
   }
   
   .container {
@@ -60,26 +63,36 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
   
   /* Hero Section */
   .hero {
+    position: relative;
     background-image: url(https://arktura.com/wp-content/uploads/2021/10/Arktura-SS2448-SB-SS-Graphite-HeatherGray-Kiwi-OfficeAtrium-Cam-04-web-1536x1035.jpg);
     background-size: cover;
     background-position: center;
     padding: 100px 0;
     text-align: center;
   }
-  
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.5);
+  }
   .hero-content {
+    position: relative;
     max-width: 600px;
     margin: 0 auto;
   }
-  .hero-content p {
-    background: rgba(109, 100, 86, 0.4);
-    border-radius: 0.5rem;
-  }
-  
+   
   .hero-content h1 {
     font-size: 48px;
     margin-bottom: 20px;
-    color: #E0C194; /* Update text color to main color */
+    color: #E0C194;
+  }
+  .hero-content p {
+    color: #ffedd3;
   }
   
   .cta-button {
@@ -212,38 +225,41 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
 
   /* Testimonials Section */
 #testimonials {
-    background-color: #b7a7903d;
-    padding: 100px 0;
-    text-align: center;
-  }
-  
-  .testimonial-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 50px;
-  }
-  
-  .testimonial {
-    max-width: 500px;
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 4px;
-  }
-  
-  .testimonial-content {
-    text-align: left;
-  }
-  
-  .testimonial-text {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .testimonial-author {
-    font-size: 16px;
-    color: #777;
-  }
+  background-color: #b7a7903d;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.testimonial-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.testimonial {
+  max-width: 500px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 4px;
+  text-align: left;
+  background-color: #fff;
+}
+
+.testimonial-content {
+  text-align: left;
+}
+
+.testimonial-text {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.testimonial-author {
+  font-size: 16px;
+  color: #777;
+}
   
   
   
@@ -386,11 +402,20 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
   .services-container {
     grid-template-columns: 1fr;
   }
+  .testimonial-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+}
 
   .gallery {
     grid-template-columns: 1fr;
   }
-}
 
 /* Medium devices (577px to 768px) */
 @media (min-width: 577px) and (max-width: 768px) {
