@@ -509,5 +509,3 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-
-/* ...existing styles... */
