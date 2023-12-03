@@ -67,7 +67,7 @@ height: auto;
 }
 
 .hero img {
-  width: 400px; 
+  width: 20rem; 
   height: auto;
 }
 
@@ -507,146 +507,135 @@ footer {
 
 /* Small devices (up to 576px) */
 @media (max-width: 576px) {
-body {
-  font-size: 14px;
-}
+  body {
+    font-size: 14px;
+  }
 
-.navbar {
-  padding: 10px;
-}
+  .navbar {
+    padding: 10px;
+  }
 
-.navbar-logo {
-  font-size: 20px;
-}
+  .navbar-logo {
+    font-size: 20px;
+  }
 
-.navbar-item {
-  margin-left: 10px;
-}
+  .navbar-item {
+    margin-left: 10px;
+  }
 
-.hero-content h1 {
-  font-size: 36px;
-}
+  .hero-content h1 {
+    font-size: 28px;
+  }
 
-.services-container {
-  grid-template-columns: 1fr;
-}
-#owners .owner-profiles {
-  flex-direction: column; /* Nastavenie na stĺpcové zobrazenie pre "Unsere Team" */
-  align-items: center; /* Zarovnanie do stredu */
-}
+  .services-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 
-.owner-profile {
-  max-width: 100%; /* Šírka 100% pre jednotlivé "owner-profile" */
-}
+  #owners .owner-profiles {
+    flex-direction: column;
+    align-items: center;
+  }
 
-.owner-profile img {
-  width: 70%; /* Nastavenie šírky obrázku na 70% šírky kontajnera */
-}
+  .owner-profile img {
+    width: 70%;
+  }
 
-.testimonial-container {
-  flex-direction: column;
-  align-items: center;
-}
+  .testimonial-container {
+    flex-direction: column;
+    align-items: center;
+  }
 
-.testimonial {
-  max-width: 100%;
-  margin-bottom: 30px;
-}
-}
+  .testimonial {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
 
-.gallery {
-  grid-template-columns: 1fr;
+  .service img {
+    max-height: 150px;
+  }
 }
 
 /* Medium devices (577px to 768px) */
 @media (min-width: 577px) and (max-width: 768px) {
-body {
-  font-size: 16px;
-}
+  body {
+    font-size: 16px;
+  }
 
-.navbar {
-  padding: 15px;
-}
+  .navbar {
+    padding: 15px;
+  }
 
-.navbar-logo {
-  font-size: 24px;
-}
+  .navbar-logo {
+    font-size: 24px;
+  }
 
-.navbar-item {
-  margin-left: 15px;
-}
+  .navbar-item {
+    margin-left: 15px;
+  }
 
-.hero-content h1 {
-  font-size: 40px;
-}
+  .hero-content h1 {
+    font-size: 40px;
+  }
 
-.services-container {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.gallery {
-  grid-template-columns: repeat(2, 1fr);
-}
+  .services-container,
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* Large devices (769px to 992px) */
 @media (min-width: 769px) and (max-width: 992px) {
-body {
-  font-size: 18px;
-}
+  body {
+    font-size: 18px;
+  }
 
-.navbar {
-  padding: 20px;
-}
+  .navbar {
+    padding: 20px;
+  }
 
-.navbar-logo {
-  font-size: 28px;
-}
+  .navbar-logo {
+    font-size: 28px;
+  }
 
-.navbar-item {
-  margin-left: 20px;
-}
+  .navbar-item {
+    margin-left: 20px;
+  }
 
-.hero-content h1 {
-  font-size: 44px;
-}
+  .hero-content h1 {
+    font-size: 44px;
+  }
 
-.services-container {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.gallery {
-  grid-template-columns: repeat(3, 1fr);
-}
+  .services-container,
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* Extra-large devices (993px and above) */
 @media (min-width: 993px) {
-body {
-  font-size: 20px;
-}
+  body {
+    font-size: 20px;
+  }
 
-.navbar {
-  padding: 30px;
-}
+  .navbar {
+    padding: 30px;
+  }
 
-.navbar-logo {
-  font-size: 32px;
-}
+  .navbar-logo {
+    font-size: 32px;
+  }
 
-.navbar-item {
-  margin-left: 30px;
-}
+  .navbar-item {
+    margin-left: 30px;
+  }
 
-.hero-content h1 {
-  font-size: 48px;
-}
+  .hero-content h1 {
+    font-size: 48px;
+  }
 
-.services-container {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.gallery {
-  grid-template-columns: repeat(4, 1fr);
-}
+  .services-container,
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
