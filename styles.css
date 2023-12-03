@@ -89,7 +89,7 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2); /* Čierna farba s 20% priehľadnosťou */
+  background-color: rgba(0, 0, 0, 0.3); /* Čierna farba s 20% priehľadnosťou */
 }
   .hero-content {
     position: relative;
