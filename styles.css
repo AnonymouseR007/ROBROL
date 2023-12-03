@@ -38,7 +38,7 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
   }
 
   .navbar-logo img {
-  width: 100px; 
+  width: 200px; 
   height: auto;
 }
   
@@ -49,7 +49,7 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
   
   .navbar-menu {
     display: flex;
-    justify-content: space-between;
+    justify-content:  right;
     list-style: none;
     margin-top: 10px;
   }
@@ -70,7 +70,7 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
   /* Hero Section */
   .hero {
     position: relative;
-    background-image: url(https://arktura.com/wp-content/uploads/2021/10/Arktura-SS2448-SB-SS-Graphite-HeatherGray-Kiwi-OfficeAtrium-Cam-04-web-1536x1035.jpg);
+    background-image: url(images/pozadia.jpg);
     background-size: cover;
     background-position: center;
     padding: 100px 0;
@@ -83,14 +83,14 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
   }
 
   .hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    
-  }
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* Čierna farba s 20% priehľadnosťou */
+}
   .hero-content {
     position: relative;
     max-width: 600px;
@@ -109,7 +109,7 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
   .cta-button {
     display: inline-block;
     padding: 15px 30px;
-    background-color: #ff5e14;
+    background-color: #e4703a;
     color: #fff;
     text-decoration: none;
     border-radius: 4px;
@@ -120,41 +120,112 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
     background-color: #d9480f;
   }
   
-  /* Services Section */
+/* Services Section */
 
 #services h2,
 #services p {
   color: #E0C194;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
 }
-  .services-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-top: 50px;
-  }
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.service {
+  text-align: center;
+}
+
+.service img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.service h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.service p {
+  color: #cfcfcf;
+}
+
+#lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#lightbox img#mainImage {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+#lightbox div#thumbnailContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+}
+
+#lightbox img.thumbnail {
+  width: 50px;
+  cursor: pointer;
+}
+#lightbox button#leftArrow,
+#lightbox button#rightArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+#lightbox button#leftArrow {
+  left: 20px;
+}
+
+#lightbox button#rightArrow {
+  right: 20px;
+}
+
+
+#lightbox button#closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+
   
-  .service {
-    text-align: center;
-  }
-  
-  .service img {
-    width: 100%;
-    max-height: 200px;
-    object-fit: cover;
-    border-radius: 4px;
-    margin-bottom: 20px;
-  }
-  
-  .service h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .service p {
-    color: #cfcfcf;
-  }
-  
-  /* Projects Section */
+  /* Projects Section
   #projects h2 {
     color: #E0C194;
   }
@@ -180,7 +251,7 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
   .project h3 {
     font-size: 24px;
     margin-bottom: 10px;
-  }
+  } */
 
   /* About Section */
   #about {
@@ -392,34 +463,55 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
 
   /*Button back to top*/
 
-#back-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #E0C194;
-  color: #fff;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-#back-to-top:hover {
-  background-color: #d9480f;
-}
-
-#back-to-top i {
-  font-size: 20px;
-}
+  #back-to-top,
+  #email-icon,
+  #instagram-icon {
+    position: fixed;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    color: #fff;
+  }
+  
+  #back-to-top {
+    right: 20px;
+    background-color: #E0C194;
+  }
+  
+  #email-icon {
+    right: 80px; /* Prispôsobte pozíciu podľa potreby */
+    background-color: #3498db; /* Príklad farby pre email */
+  }
+  
+  #instagram-icon {
+    right: 140px; /* Prispôsobte pozíciu podľa potreby */
+    background-color: #e4405f; /* Príklad farby pre Instagram */
+  }
+  
+  #back-to-top:hover,
+  #email-icon:hover,
+  #instagram-icon:hover {
+    background-color: #d9480f;
+  }
+  
+  #back-to-top i,
+  #email-icon i,
+  #instagram-icon i {
+    font-size: 20px;
+  }
   /*Footer*/
   footer {
     background-color: #333;
     color: #fff;
   }
+
+  
   
 /* Small devices (up to 576px) */
 @media (max-width: 576px) {
