@@ -538,6 +538,19 @@ body, h1, h2, h3, p, ul, li, form, input, textarea, button {
   .services-container {
     grid-template-columns: 1fr;
   }
+  #owners .owner-profiles {
+    flex-direction: column; /* Nastavenie na stĺpcové zobrazenie pre "Unsere Team" */
+    align-items: center; /* Zarovnanie do stredu */
+  }
+
+  .owner-profile {
+    max-width: 100%; /* Šírka 100% pre jednotlivé "owner-profile" */
+  }
+
+  .owner-profile img {
+    width: 70%; /* Nastavenie šírky obrázku na 70% šírky kontajnera */
+  }
+
   .testimonial-container {
     flex-direction: column;
     align-items: center;
