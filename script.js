@@ -113,5 +113,5 @@ function scrollToSection(sectionId) {
 // JavaScript pre funkciu openInstagramPage()
 function openInstagramPage() {
   // Pridajte skutočný odkaz na vašu stránku Instagramu
-  window.open('https://www.instagram.com/');
+  window.open('https://www.instagram.com/robrol_gmbh/');
 }
