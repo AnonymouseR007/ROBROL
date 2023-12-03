@@ -26,17 +26,6 @@ h1, h2, h3, p, a {
   padding: 20px;
 }
 
-
-.logo-part-1 {
-  color: #F5D4A2;
-  font-size: 4rem; 
-}
-
-.logo-part-2 {
-  color: #DBBD91;
-  font-size: 3.5rem; 
-}
-
 .navbar-logo img {
 width: 200px; 
 height: auto;
@@ -99,7 +88,7 @@ background-color: rgba(0, 0, 0, 0.3); /* Čierna farba s 20% priehľadnosťou */
  
 .hero-content h1 {
   font-size: 48px;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
   color: #E0C194;
 }
 .hero-content p {
