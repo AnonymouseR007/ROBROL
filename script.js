@@ -172,3 +172,24 @@ function changeImage(index) {
     thumbnailContainer.appendChild(thumbnail); // Append the thumbnail to the thumbnail container
   });
 }
+
+// JavaScript pre funkciu scrollToTop()
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+
+// JavaScript pre funkciu scrollToSection()
+function scrollToSection(sectionId) {
+  document.getElementById(sectionId).scrollIntoView({
+    behavior: 'smooth'
+  });
+}
+
+// JavaScript pre funkciu openInstagramPage()
+function openInstagramPage() {
+  // Pridajte skutočný odkaz na vašu stránku Instagramu
+  window.open('https://www.instagram.com/robrol_gmbh/');
+}
