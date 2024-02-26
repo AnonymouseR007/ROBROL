@@ -149,6 +149,8 @@ margin-bottom: 10px;
 color: #cfcfcf;
 }
 
+
+
 #lightbox {
 position: fixed;
 top: 0;
@@ -265,9 +267,16 @@ cursor: pointer;
 
 .owner-profiles {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   gap: 30px;
   margin-top: 50px;
+}
+
+.owners, .employees {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }
 
 .owner-profile {
@@ -537,8 +546,25 @@ footer {
     align-items: center;
   }
 
+  .owners,
+  .employees {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .owner-profile {
+    max-width: 45%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
   .owner-profile img {
-    width: 70%;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 50%;
   }
 
   .testimonial-container {
