@@ -1,7 +1,7 @@
 // An array of image URL arrays, each sub-array represents a gallery of images
 let imageGalleries = [
-  ['images/gallery/decken/1.jpg', 'images/gallery/decken/2.jpg', 'images/gallery/decken/3.jpg', 'images/gallery/decken/4.jpg', 'images/gallery/decken/5.jpg', 'images/gallery/decken/6.jpg', 'images/gallery/decken/7.jpg', 'images/gallery/decken/8.jpg', 'images/gallery/decken/9.jpg', 'images/gallery/decken/10.jpg', 'images/gallery/decken/11.jpg', 'images/gallery/decken/12.jpg', 'images/gallery/decken/13.jpg', 'images/gallery/decken/14.jpg', 'images/gallery/decken/15.jpg', 'images/gallery/decken/16.jpg', 'images/gallery/decken/17.jpg', 'images/gallery/decken/18.jpg', ],
-  ['images/gallery/wand/1.jpg', 'images/gallery/wand/2.png', 'images/gallery/wand/3.jpg', 'images/gallery/wand/4.jpg', ],
+  ['images/gallery/decken/1.jpg', 'images/gallery/decken/2.jpg', 'images/gallery/decken/5.jpg', 'images/gallery/decken/6.jpg', 'images/gallery/decken/7.jpg', 'images/gallery/decken/8.jpg', 'images/gallery/decken/9.jpg', 'images/gallery/decken/10.jpg', 'images/gallery/decken/11.jpg', 'images/gallery/decken/12.jpg', 'images/gallery/decken/13.jpg', 'images/gallery/decken/14.jpg', 'images/gallery/decken/15.jpg', 'images/gallery/decken/16.jpg', 'images/gallery/decken/17.jpg', 'images/gallery/decken/18.jpg', ],
+  ['images/gallery/wand/2.png', 'images/gallery/wand/3.jpg',],
   ['images/gallery/innen/1.jpg', 'images/gallery/innen/2.jpg', 'images/gallery/innen/3.jpg', 'images/gallery/innen/4.jpg', 'images/gallery/innen/5.jpg', 'images/gallery/innen/6.jpg', 'images/gallery/innen/7.jpg', 'images/gallery/innen/8.jpg', ]
 ];
 
