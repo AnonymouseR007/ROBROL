@@ -54,6 +54,7 @@ serviceDivs.forEach((serviceDiv, index) => {
 // Function to open the lightbox
 function openLightbox() {
   lightbox.style.display = 'flex'; // Show the lightbox by setting display to 'flex'
+  fadeIn(lightbox); // Fade in animation
   changeImage(0); // Display the first image in the gallery
 
   // Show loading indicator
@@ -127,14 +128,21 @@ function handleTouchMove(event) {
 
 // Function to close the lightbox
 function closeLightbox() {
-  lightbox.style.display = 'none'; // Hide the lightbox by setting display to 'none'
+  fadeOut(lightbox); // Fade out animation
+  setTimeout(() => {
+    lightbox.style.display = 'none'; // Hide the lightbox by setting display to 'none' after animation completes
+  }, 500); // Adjust the duration to match the animation time
   thumbnailContainer.innerHTML = ''; // Clear the thumbnails
 }
 
 // Function to navigate between images
 function navigate(direction) {
-  imageIndex = (imageIndex + direction + currentGallery.length) % currentGallery.length;
-  changeImage(imageIndex); // Display the new image
+  fadeOut(mainImage); // Fade out animation
+  setTimeout(() => {
+    imageIndex = (imageIndex + direction + currentGallery.length) % currentGallery.length;
+    changeImage(imageIndex); // Display the new image
+    fadeIn(mainImage); // Fade in animation
+  }, 500); // Adjust the duration to match the animation time
 }
 
 // Function to show loading indicator
@@ -142,7 +150,7 @@ function showLoadingIndicator() {
   // Create a loading indicator element
   const loadingIndicator = document.createElement('div');
   loadingIndicator.id = 'loadingIndicator';
-  loadingIndicator.innerHTML = 'Wird geladen...'; // You can customize the loading text here
+  loadingIndicator.innerHTML = 'Loading...'; // You can customize the loading text here
   lightbox.appendChild(loadingIndicator);
 }
 
@@ -175,6 +183,24 @@ function changeImage(index) {
   });
 }
 
+// Function to fade in an element
+function fadeIn(element) {
+  element.style.opacity = 0;
+  element.style.transition = 'opacity 0.5s ease';
+  setTimeout(() => {
+    element.style.opacity = 1;
+  }, 100);
+}
+
+// Function to fade out an element
+function fadeOut(element) {
+  element.style.opacity = 1;
+  element.style.transition = 'opacity 0.5s ease';
+  setTimeout(() => {
+    element.style.opacity = 0;
+  }, 100);
+}
+
 // JavaScript pre funkciu scrollToTop()
 function scrollToTop() {
   window.scrollTo({
@@ -192,6 +218,6 @@ function scrollToSection(sectionId) {
 
 // JavaScript pre funkciu openInstagramPage()
 function openInstagramPage() {
-  // Pridajte skutočný odkaz na vašu stránku Instagramu
+  // Replace this URL with your actual Instagram page URL
   window.open('https://www.instagram.com/robrol_gmbh/');
 }
