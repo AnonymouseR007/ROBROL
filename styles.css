@@ -608,6 +608,17 @@ footer {
   .gallery {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  /* Limiting employees to maximum 4 in a row */
+  .employees {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .employees .owner-profile {
+    max-width: calc(25% - 30px); /* Adjust the percentage as needed */
+    margin-bottom: 20px;
+  }
 }
 
 /* Large devices (769px to 992px) */
@@ -636,6 +647,17 @@ footer {
   .gallery {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  /* Limiting employees to maximum 4 in a row */
+  .employees {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .employees .owner-profile {
+    max-width: calc(25% - 30px); /* Adjust the percentage as needed */
+    margin-bottom: 20px;
+  }
 }
 
 /* Extra-large devices (993px and above) */
@@ -663,5 +685,16 @@ footer {
   .services-container,
   .gallery {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Limiting employees to maximum 4 in a row */
+  .employees {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .employees .owner-profile {
+    max-width: calc(25% - 30px); /* Adjust the percentage as needed */
+    margin-bottom: 20px;
   }
 }
