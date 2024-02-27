@@ -39,11 +39,13 @@ lightbox.appendChild(thumbnailContainer);
 // Select all the '.service' divs
 const serviceDivs = document.querySelectorAll(".service");
 
-// Add an event listener to the 'img' tag inside each '.service' div
-// When the image is clicked, it opens the corresponding image gallery in the lightbox
+// Add an event listener to each '.service' div
+// When clicked, it opens the corresponding image gallery in the lightbox
 serviceDivs.forEach((serviceDiv, index) => {
-  serviceDiv.querySelector('img').addEventListener("click", (e) => {
-    e.stopPropagation();
+  const overlayText = serviceDiv.querySelector('.overlay-text');
+  const serviceImage = serviceDiv.querySelector('img');
+  
+  serviceDiv.addEventListener("click", (e) => {
     currentGallery = imageGalleries[index];
     openLightbox();
   });
