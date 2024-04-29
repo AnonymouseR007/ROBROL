@@ -24,6 +24,10 @@ h1, h2, h3, p, a {
   background-color: #333;
   color: #fff;
   padding: 20px;
+  position: fixed; /* Add this line */
+  top: 0; /* Add this line */
+  width: 100%; /* Optional, to span the entire width */
+  z-index: 1000; /* Adjust as needed */
 }
 .navbar-container {
   display: flex;
@@ -74,6 +78,7 @@ height: auto;
   padding: 100px 0;
   text-align: center;
   border-radius: 0 0 0 25rem;
+  margin-top: 7.5rem;
 }
 
 .hero img {
@@ -563,6 +568,10 @@ footer {
     font-size: 0.7rem;
   }
 
+  .hero {
+    margin-top: 3.65rem;
+  }
+
   .hero-content h1 {
     font-size: 28px;
   }
@@ -632,6 +641,10 @@ footer {
     margin-left: 15px;
   }
 
+  .hero {
+    margin-top: 5.7rem;
+  }
+
   .hero-content h1 {
     font-size: 40px;
   }
@@ -669,6 +682,10 @@ footer {
 
   .navbar-item {
     margin-left: 20px;
+  }
+
+  .hero {
+    margin-top: 6.3rem; 
   }
 
   .hero-content h1 {
