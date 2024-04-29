@@ -25,9 +25,17 @@ h1, h2, h3, p, a {
   color: #fff;
   padding: 20px;
 }
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
-.navbar-logo img {
-width: 200px; 
+.logo img {
+width: 3.75rem; 
 height: auto;
 }
 
@@ -41,6 +49,7 @@ height: auto;
   justify-content:  right;
   list-style: none;
   margin-top: 10px;
+  
 }
 
 .navbar-item {
@@ -64,6 +73,7 @@ height: auto;
   background-position: center;
   padding: 100px 0;
   text-align: center;
+  border-radius: 0 0 0 25rem;
 }
 
 .hero img {
@@ -78,7 +88,8 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-background-color: rgba(0, 0, 0, 0.3); /* Čierna farba s 20% priehľadnosťou */
+background-color: rgba(0, 0, 0, 0.3); 
+border-radius: 0 0 0 20rem;
 }
 .hero-content {
   position: relative;
@@ -159,7 +170,7 @@ background-color: rgba(0, 0, 0, 0.3); /* Čierna farba s 20% priehľadnosťou */
   color: #fff;
 }
 
-
+/* Gallery */
 
 #lightbox {
 position: fixed;
@@ -261,6 +272,7 @@ cursor: pointer;
   background-color: #b7a7903d;
   padding: 100px 0;
   text-align: center;
+  border-radius: 0 20rem 0 0;
 }
 
 #about h2,
@@ -285,21 +297,24 @@ cursor: pointer;
 
 .owners, .employees {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
 }
 
 .owner-profile {
-  max-width: 300px;
+  max-width: 270px;
   text-align: center;
 }
 
 .owner-profile img {
-  width: 100%;
-  max-height: 300px;
+  width: 300px;
+  height: auto;
+  max-width: 100%;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 20%;
   margin-bottom: 20px;
+  box-shadow: 20px 20px 45px rgba(0, 0, 0, 0.4);
 }
 
 .owner-profile blockquote {
@@ -321,6 +336,7 @@ cursor: pointer;
 background-color: #b7a7903d;
 padding: 100px 0;
 text-align: center;
+border-radius: 0 0 0 20rem;
 }
 
 .testimonial-container {
@@ -496,13 +512,13 @@ body {
 }
 
 #email-icon {
-  right: 80px; /* Prispôsobte pozíciu podľa potreby */
-  background-color: #3498db; /* Príklad farby pre email */
+  right: 80px; 
+  background-color: #3498db; 
 }
 
 #instagram-icon {
-  right: 140px; /* Prispôsobte pozíciu podľa potreby */
-  background-color: #e4405f; /* Príklad farby pre Instagram */
+  right: 140px; 
+  background-color: #e4405f; 
 }
 
 #back-to-top:hover,
@@ -537,6 +553,10 @@ footer {
   .navbar-logo {
     font-size: 20px;
   }
+  .logo img {
+    width: 2rem; 
+    height: auto;
+    }
 
   .navbar-item {
     margin-left: 10px;
@@ -574,7 +594,7 @@ footer {
     width: 100%;
     max-width: 200px;
     height: auto;
-    border-radius: 50%;
+    border-radius: 20%;
   }
 
   .testimonial-container {
@@ -626,7 +646,7 @@ footer {
   }
 
   .employees .owner-profile {
-    max-width: calc(25% - 30px); /* Adjust the percentage as needed */
+    max-width: calc(25% - 30px);
     margin-bottom: 20px;
   }
 }
@@ -658,14 +678,14 @@ footer {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  /* Limiting employees to maximum 4 in a row */
+
   .employees {
     flex-wrap: wrap;
     justify-content: center;
   }
 
   .employees .owner-profile {
-    max-width: calc(25% - 30px); /* Adjust the percentage as needed */
+    max-width: calc(25% - 30px); 
     margin-bottom: 20px;
   }
 }
@@ -697,14 +717,13 @@ footer {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  /* Limiting employees to maximum 4 in a row */
   .employees {
     flex-wrap: wrap;
     justify-content: center;
   }
 
   .employees .owner-profile {
-    max-width: calc(25% - 30px); /* Adjust the percentage as needed */
+    max-width: calc(25% - 30px); 
     margin-bottom: 20px;
   }
 }
